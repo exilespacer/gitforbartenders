@@ -11,7 +11,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ```{r data}
-cocktails <- rio::import("cocktails.csv")
+require(dplyr)
+cocktails <- rio::import("cocktails.csv") %>% select(drink, category, glass, iba, ingredient, measure)
 ```
 
 
