@@ -1,0 +1,21 @@
+---
+title: "cocktail"
+author: "Chung-hong Chan"
+date: "6/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r data}
+cocktails <- rio::import("cocktails.csv")
+```
+
+
+```{r searchengine, echo=FALSE, results="asis"}
+require(DT)
+datatable(cocktails)
+```
