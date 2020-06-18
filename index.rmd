@@ -10,13 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r data}
+```{r data, echo = FALSE, message = FALSE}
 require(dplyr)
 cocktails <- rio::import("cocktails.csv") %>% select(drink, category, glass, iba, ingredient, measure)
 ```
 
 
-```{r searchengine, echo=FALSE, results="asis"}
+```{r searchengine, echo=FALSE, results="asis", message = FALSE}
 require(DT)
 datatable(cocktails)
 ```
